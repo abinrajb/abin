@@ -29,7 +29,6 @@ document.getElementById('login-form').addEventListener('submit', function(event)
 
         if (storedPassword === password) {
             localStorage.setItem("flag","success");
-            alert('Login successful.');
             window.location.href = 'index.html'; // Redirect to the main page
            
         } else {
