@@ -1,0 +1,115 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color:#A0D2EB;
+    color: #333; /* Dark gray text for readability */
+
+}
+
+header{
+    background-color: #17252a;
+    color: #fff; /* White text */
+    padding: 10px 0;
+    text-align: center;
+    display: flex;
+    /* flex-direction: column; */
+    align-items: center;
+    justify-content: space-between;
+    width: 99vw;
+
+}
+
+#heading-in-header{
+    flex-grow: 1;
+    align-content: center;
+}
+
+header nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+header nav ul li {
+    margin: 0 10px;
+}
+
+header nav ul li a {
+    color: #fff; /* White text for nav links */
+    font-weight: bold;
+}
+
+header .site-logo {
+    height: 70px;
+    width: auto;
+    border-radius: 10px;
+    margin-left:21px ;
+}
+a {
+    color: #0056b3; /* Medium blue for links */
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+#contact-division{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+section {
+    padding: 20px;
+    margin: 20px;
+    background-color:#A0D2EB;
+    border-radius: 8px;
+    box-shadow: 10px 10px 10px 10px rgba(0, 0, 0, 0.1);
+    width:300px;
+
+}
+section#contact form {
+    display: flex;
+    flex-direction: column;
+}
+
+section#contact form label {
+    margin: 10px 0 5px;
+    color: #003366; /* Dark blue text for labels */
+}
+
+section#contact form input, section#contact form textarea {
+    padding: 10px;
+    margin-bottom: 10px;
+    width: 100%;
+    box-sizing: border-box;
+    border: 1px solid #0073e6; /* Blue border */
+    border-radius: 4px;
+}
+
+section#contact form button {
+    background-color: #0073e6; /* Blue background */
+    color: #fff; /* White text */
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+section#contact form button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+footer {
+    background-color: #17252a; /* Dark blue background */
+    color: #feffff;
+    text-align: center;
+    padding: 10px 0;
+    width: 100%;
+    height: auto;
+    margin-top:4%;
+}

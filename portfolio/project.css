@@ -9,26 +9,45 @@ body {
 
 header {
     background-color: #17252a;
-    color: #fff; /* White text */
+    color: #fff; 
     padding: 10px 0;
     text-align: center;
+    display: flex;
+    position: fixed;
+   
+    justify-content: space-between;
+    align-items: center;
+    width: 99%;
+    /* height: 60px; */
+}
+#heading-in-header{
+    flex-grow: 1;
+    align-content: center;
 }
 
 header nav ul {
     list-style: none;
     padding: 0;
+    margin: 10px 0;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 header nav ul li {
-    display: inline;
     margin: 0 10px;
 }
 
 header nav ul li a {
-    color: #fff;
-    text-decoration: none;
+    color: #fff; /* White text for nav links */
+    font-weight: bold;
 }
 
+header .site-logo {
+    height: 50px;
+    width: auto;
+    border-radius: 10px;
+
+}
 section {
     padding: 20px;
     margin: 20px 0;
@@ -73,14 +92,42 @@ footer {
     padding: 10px 0;
 }
 
+
+@media (min-width: 768px) {
+    header {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 10px 20px;
+    }
+    
+    header nav ul {
+        margin: 0;
+    }
+}
 @media (max-width: 820px) {
     .projectsallign {
         flex-direction: column;
         align-items: stretch;
     }
 
+    header {
+    display: flex;
+     flex-direction: column;
+     height: auto;
+    width: 100vw;
+    }
     .project {
         flex: 1 1 100%;
         margin: 10px 0;
     }
 }
+@media (min-width: 1024px) {
+    header .site-logo {
+        height: 70px;
+    }
+    
+    section {
+        margin: 40px;
+    }
+}
+
