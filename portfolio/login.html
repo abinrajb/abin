@@ -10,17 +10,21 @@
     <div class="login-container">
         <h2>Login to Your Account</h2>
         <form id="login-form" method="POST">
-            <label for="username">Username</label>
-            <input type="text" id="username-text" name="username" required>
-
-            <label for="password">Password</label>
-            <input type="password" id="password-text" name="password" required>
-
+            <input type="text" id="username-text" placeholder="Username" name="username" required>
+                <div class="password-container">
+                    <input type="password" id="password-text" placeholder="Password" name="password" required>
+                    <span id="toggle-password" class="toggle-password">👁️</span>
+                </div>    
+            <P id="invalid-password" class="invalid-alert"></P>
             <button type="submit" class="login-button">Login</button>
         </form>
         <form id="signup-form" method="POST">
-            <button type="submit">Signup</button>
+             <p>Don't have an Account ? <a
+             href="signup.html" onclick="cleartextfield()">Signup</a></p>
         </form>  
+        <form id="signup-form" method="POST">
+            <a href="password.html" onclick="cleartextfield()">Forgot password ?</a>
+       </form>
     </div>
     <script src="login.js"></script>
 </body>

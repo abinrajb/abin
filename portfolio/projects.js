@@ -1,4 +1,4 @@
-console.log(localStorage.getItem("flag"))
+console.log(sessionStorage.getItem("flag"))
 if(localStorage.getItem("flag")=="success") {
    localStorage.setItem("f1","Projects");
    localStorage.setItem("f2","Emotion Based Music Player");

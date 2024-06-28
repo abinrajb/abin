@@ -52,3 +52,37 @@ body {
     background-color: #0056b3;
 }
 
+
+.invalid-alert,#invalid-signup{
+    color: red;
+    margin-top:0 ;
+    font-size: small;
+    text-align: left;
+    padding-left: 15px;
+}
+
+#password-text,#username-text,#confirmpassword-text,#newpassword-text{
+    border:1px solid black;
+}
+
+
+.password-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin: 0 0 0 4px;
+}
+
+.toggle-password {
+    position: absolute;
+    right: 15px; /* Position the icon to the right end of the input field */
+    cursor: pointer;
+    margin-bottom: 15px;
+}
+#signup-form{
+    font-size: small;
+}
+
+a{
+    text-decoration: none;
+}

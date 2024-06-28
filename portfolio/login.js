@@ -1,23 +1,20 @@
-localStorage.setItem("flag","false");
-document.getElementById('signup-form').addEventListener('submit', function(event) {
-    event.preventDefault();
+// Set initial flag value
+sessionStorage.setItem("flag", "false");
 
-    const username = document.getElementById('username-text').value;
-    const password = document.getElementById('password-text').value;
-
-    if (username && password) {
-        if (localStorage.getItem(username)) {
-            alert('Username already exists. Please choose another one.');
-        } else {
-            localStorage.setItem(username, password);
-            alert('Signup successful. You can now log in.');
-            document.getElementById('login-form').reset();
-        }
-    } else {
-        alert('Please fill in both fields.');
-    }
+// localStorage.setItem("id1","! invalid username");
+localStorage.setItem("password1","invalid username/password !");
+function cleartextfield(){
+    document.getElementById('username-text').value = '';
+    document.getElementById('password-text').value = '';
+}
+// Toggle password visibility
+document.getElementById('toggle-password').addEventListener('click', function() {
+    const passwordField = document.getElementById('password-text');
+    const type = passwordField.getAttribute('type') === 'password' ? 'text' : 'password';
+    passwordField.setAttribute('type', type);
+    this.textContent = type === 'password' ? '👁️' : '🙈';
 });
-
+// Event listener for login form
 document.getElementById('login-form').addEventListener('submit', function(event) {
     event.preventDefault();
 
@@ -28,13 +25,14 @@ document.getElementById('login-form').addEventListener('submit', function(event)
         const storedPassword = localStorage.getItem(username);
 
         if (storedPassword === password) {
-            localStorage.setItem("flag","success");
+            sessionStorage.setItem("flag", "success");
             window.location.href = 'index.html'; // Redirect to the main page
-           
         } else {
-            alert('Invalid username or password.');            
+            document.getElementById("invalid-password").innerHTML=localStorage.getItem("password1");
         }
     } else {
         alert('Please fill in both fields.');
     }
+    document.getElementById('username-text').value = '';
+    document.getElementById('password-text').value = '';
 });

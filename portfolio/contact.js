@@ -1,4 +1,4 @@
-if(localStorage.getItem("flag")=="success") {
+if(sessionStorage.getItem("flag")=="success") {
     document.getElementById('contact-form').addEventListener('submit', function(event) {
         event.preventDefault();
         

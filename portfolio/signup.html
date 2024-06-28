@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - My Portfolio</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+    <div class="login-container">
+        <h2>Create new Account</h2>
+        <form id="login-form" method="POST">
+            <input type="text" id="username-text" placeholder="Username" name="username" required>
+            <div class="password-container" id="passwordContainer">
+                <input class="passwordInSignup" type="password" placeholder="New Password" id="newpassword-text" name="password" required>
+                <span id="toggle-password" class="toggle-password">👁️</span>
+            </div>
+            <div class="password-container" >
+                 <input type="password" class="passwordInSignup" id="confirmpassword-text" placeholder="Confirm Password" name="password" required>
+                 <span id="toggle-Confirmpassword" class="toggle-password">👁️</span>
+            </div>
+            <p id="invalid-signup"></p>
+        </form>
+        <form id="signup-form" method="POST">
+            <button type="submit">Signup</button>
+        </form> 
+        <form id="signup-form" method="POST">
+            <p>I have an Account <a href="login.html" onclick="cleartextfield()">Login</a></p>
+       </form>   
+    </div>
+    <script src="signup.js"></script>
+</body>
+</html>
